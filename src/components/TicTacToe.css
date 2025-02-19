@@ -1,0 +1,131 @@
+/* Background with colorful gradient animation */
+body {
+  background: linear-gradient(45deg, #ff6b6b, #f7b733, #4ecdc4, #556270);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-y: auto; /* Allows scrolling but hides scrollbar */
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Gradient background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Game container */
+.game-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Score and AI Mode Container */
+.score-ai-container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* The game board (3x3 grid) */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin: 20px auto;
+  width: 320px;
+  height: 320px;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Individual cells */
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  text-align: center;
+  background: black;
+  border: 2px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Colorful X and O */
+.cell.x {
+  color: #ff6b6b;
+  text-shadow: 0px 0px 10px #ff6b6b;
+}
+
+.cell.o {
+  color: #4ecdc4;
+  text-shadow: 0px 0px 10px #4ecdc4;
+}
+
+/* Reset buttons */
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.reset-btn, .reset-score-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.reset-btn:hover, .reset-score-btn:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+/* AI Mode Toggle Button */
+.toggle-ai {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-ai:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
