@@ -1,3 +1,49 @@
+Tic-Tac-Toe Game
+
+This is a simple Tic-Tac-Toe game built with React. Players take turns marking spaces on a 3x3 grid, aiming to get three in a row to win. The game supports two modes: Player vs. Player and Player vs. AI.
+
+Features
+
+🎮 Play Against AI or a Friend
+
+🔄 Auto-Reset After Win or Draw
+
+🏆 Score Tracking
+
+💡 Smooth UI with Animations
+
+⚡ Built with React for Interactivity
+
+Installation
+
+Clone this repository:
+
+git clone https://github.com/your-username/tic-tac-toe.git
+
+Navigate to the project folder:
+
+cd tic-tac-toe
+
+Install dependencies:
+
+npm install
+
+Start the game:
+
+npm start
+
+How to Play
+
+Click on a cell to place X or O.
+
+The game automatically detects a winner or draw.
+
+Switch between Player vs. Player and Player vs. AI anytime.
+
+Scores persist until reset manually.
+
+Enjoy playing Tic-Tac-Toe! 🚀🔥
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
